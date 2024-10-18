@@ -14,6 +14,6 @@ CREATE TABLE Authors (author_id INT AUTO_INCREMENT Primary Key, author_name VARC
 
 CREATE TABLE Customers (customer_id Primary Key, customer_name VARCHAR(215),email VARCHAR(215), address TEXT);
 
-CREATE TABLE Orders ( order_id Primary Key, customer_id INT, FOREIGN KEY(customer_id) REFERENCES Customers(customer_id), order_date DATE);
+CREATE TABLE Orders (order_id Primary Key, customer_id INT, FOREIGN KEY (customer_id) REFERENCES Customers(customer_id), order_date DATE);
 
 CREATE TABLE Order_Details (orderdetailid INT Primary Key, order_id INT, FOREIGN KEY(order_id) REFERENCES Orders(order_id), FOREIGN KEY (book_id) REFERENCES Books(book_id), quantity DOUBLE);
